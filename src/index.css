@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #05080c;
+  color: #e8edf3;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(0, 230, 184, 0.3);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05080c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2b37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #324150;
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, #00e6b8 0%, #4dffcd 50%, #00b894 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: rgba(20, 29, 39, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(31, 43, 55, 0.8);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px rgba(0, 230, 184, 0.15), 0 0 24px rgba(0, 230, 184, 0.08);
+  }
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(31, 43, 55, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 43, 55, 0.4) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.radial-glow {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 230, 184, 0.12), transparent 70%);
+}
